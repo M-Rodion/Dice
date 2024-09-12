@@ -1,0 +1,71 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+button {
+    margin-top:-450px;
+    padding: 10px 20px;
+    font-size: 16px;
+    position: absolute;
+    color: white;
+    background-color: rgba(0, 50, 255, 0.7);
+    width: 100px;
+    height: 70px;
+    border: 1px solid black;
+    border-radius: 7px;
+    font-family: sans-serif;
+}
+
+}
+
+.dice-container {
+    perspective: 1000px;
+}
+
+.dice {
+    width: 180px;
+    height: 180px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(0deg);
+    transition: transform 3s;
+}
+
+.face {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background: white;
+    border: 1px solid black;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-align: center;
+    line-height: 100px;
+}
+
+.face1 { transform: rotateX(0deg) translateZ(90px); }
+
+.face2 { transform: rotateY(90deg) translateZ(90px); }
+
+.face3 { transform: rotateY(180deg) translateZ(90px); }
+
+.face4 { transform: rotateY(-90deg) translateZ(90px); }
+
+.face5 { transform: rotateX(90deg) translateZ(90px); }
+
+.face6 { transform: rotateX(-90deg) translateZ(90px); }
+
+img{
+  height: 180px;
+  width: 180px;
+}
+
+
