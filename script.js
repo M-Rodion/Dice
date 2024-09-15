@@ -1,4 +1,6 @@
 document.getElementById('rollButton').addEventListener('click', () => {
+  let rollButton1 = document.getElementById("rollButton");
+      rollButton1.id = `r`;
     const dice = document.getElementById('dice');
     let randomNumber = Math.floor(Math.random() * 6) + 1;
     
@@ -53,6 +55,8 @@ document.getElementById('rollButton').addEventListener('click', () => {
     setTimeout(() => {
       let score = document.getElementById("score");
       score.value = `You rolled a ${randomNumber}`;
+      rollButton1 = document.getElementById("r");
+      rollButton1.id = `rollButton`;
         
     }, 8500);
     
