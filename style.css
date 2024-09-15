@@ -68,4 +68,8 @@ img{
   width: 180px;
 }
 
+#score {
+    position: absolute;
+    margin-top:-550px;
 
+}

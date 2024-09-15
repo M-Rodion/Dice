@@ -51,7 +51,8 @@ document.getElementById('rollButton').addEventListener('click', () => {
         
     }, 6000);
     setTimeout(() => {
-      alert(`You rolled a ${randomNumber}`);
+      let score = document.getElementById("score");
+      score.value = `You rolled a ${randomNumber}`;
         
     }, 8500);
     
