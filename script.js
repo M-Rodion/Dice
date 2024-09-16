@@ -1,6 +1,10 @@
+let buttonClick = 0;
+
+
 document.getElementById('rollButton').addEventListener('click', () => {
-  let rollButton1 = document.getElementById("rollButton");
-      rollButton1.id = `r`;
+  buttonClick ++;
+  if (buttonClick == 1) {
+  loadingScore();
     const dice = document.getElementById('dice');
     let randomNumber = Math.floor(Math.random() * 6) + 1;
     
@@ -55,9 +59,67 @@ document.getElementById('rollButton').addEventListener('click', () => {
     setTimeout(() => {
       let score = document.getElementById("score");
       score.value = `You rolled a ${randomNumber}`;
-      rollButton1 = document.getElementById("r");
-      rollButton1.id = `rollButton`;
+      buttonClick = 0;
         
-    }, 8500);
+    }, 9000);
     
-});
+}else{
+  console.log("Error");
+}});
+let score = document.getElementById("score");
+let i = 0;
+
+function loadingScore() {
+  score.value = `.`;
+  setTimeout(() => {
+  score.value = `..`;
+  }, 500);
+  setTimeout(() => {
+  score.value = `...`;
+  }, 1000);
+  setTimeout(() => {
+  score.value = `.`;
+  }, 1500);
+  setTimeout(() => {
+  score.value = `..`;
+  }, 2000);
+  setTimeout(() => {
+  score.value = `...`;
+  }, 2500);
+  setTimeout(() => {
+  score.value = `.`;
+  }, 3000);
+  setTimeout(() => {
+  score.value = `..`;
+  }, 3500);
+  setTimeout(() => {
+  score.value = `...`;
+  }, 4000);
+  setTimeout(() => {
+  score.value = `.`;
+  }, 4500);
+  setTimeout(() => {
+  score.value = `..`;
+  }, 5000);
+  setTimeout(() => {
+  score.value = `...`;
+  }, 5500);
+  setTimeout(() => {
+  score.value = `.`;
+  }, 6000);
+  setTimeout(() => {
+  score.value = `..`;
+  }, 6500);
+  setTimeout(() => {
+  score.value = `...`;
+  }, 7000);
+  setTimeout(() => {
+  score.value = `.`;
+  }, 7500);
+  setTimeout(() => {
+  score.value = `..`;
+  }, 8000);
+  setTimeout(() => {
+  score.value = `...`;
+  }, 8500);
+}
